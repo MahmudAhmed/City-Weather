@@ -15,6 +15,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7B0C5784998A29E517983E0C /* libPods-CityWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2502ACF51380E8237829647D /* libPods-CityWeather.a */; };
+		A519C08204204A71A4191F02 /* Teko-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0ED35E12A554490925E6426 /* Teko-Bold.ttf */; };
+		D5BDABB587424EEA98C9783E /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB8BA70E422400E9E746957 /* Teko-Light.ttf */; };
+		7E5DDE4794EE4283BF5BC768 /* Teko-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8F17C8507194D60AB373300 /* Teko-Medium.ttf */; };
+		3A28CF58D519494BAE4E9686 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C78FF5A4DD34E3BA5857FBB /* Teko-Regular.ttf */; };
+		7C125EE71B824190A33C79A5 /* Teko-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCAE8700F8AE417C9611E3B4 /* Teko-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		E40B1F720DE0D29BF6B90074 /* Pods-CityWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityWeather.release.xcconfig"; path = "Target Support Files/Pods-CityWeather/Pods-CityWeather.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		B0ED35E12A554490925E6426 /* Teko-Bold.ttf */ = {isa = PBXFileReference; name = "Teko-Bold.ttf"; path = "../assets/fonts/Teko-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7DB8BA70E422400E9E746957 /* Teko-Light.ttf */ = {isa = PBXFileReference; name = "Teko-Light.ttf"; path = "../assets/fonts/Teko-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D8F17C8507194D60AB373300 /* Teko-Medium.ttf */ = {isa = PBXFileReference; name = "Teko-Medium.ttf"; path = "../assets/fonts/Teko-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C78FF5A4DD34E3BA5857FBB /* Teko-Regular.ttf */ = {isa = PBXFileReference; name = "Teko-Regular.ttf"; path = "../assets/fonts/Teko-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CCAE8700F8AE417C9611E3B4 /* Teko-SemiBold.ttf */ = {isa = PBXFileReference; name = "Teko-SemiBold.ttf"; path = "../assets/fonts/Teko-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6C68EC841F3FBF9CD21359E0 /* Pods */,
+				0F304D381E404101AC1F2B4E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -114,6 +125,19 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		0F304D381E404101AC1F2B4E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				B0ED35E12A554490925E6426 /* Teko-Bold.ttf */,
+				7DB8BA70E422400E9E746957 /* Teko-Light.ttf */,
+				D8F17C8507194D60AB373300 /* Teko-Medium.ttf */,
+				4C78FF5A4DD34E3BA5857FBB /* Teko-Regular.ttf */,
+				CCAE8700F8AE417C9611E3B4 /* Teko-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -144,7 +168,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CityWeather" */;
@@ -176,6 +200,11 @@
 				0731D3BE24204D9B009CAE85 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				A519C08204204A71A4191F02 /* Teko-Bold.ttf in Resources */,
+				D5BDABB587424EEA98C9783E /* Teko-Light.ttf in Resources */,
+				7E5DDE4794EE4283BF5BC768 /* Teko-Medium.ttf in Resources */,
+				3A28CF58D519494BAE4E9686 /* Teko-Regular.ttf in Resources */,
+				7C125EE71B824190A33C79A5 /* Teko-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
