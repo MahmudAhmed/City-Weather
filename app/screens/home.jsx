@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   FlatList,
   StatusBar,
   TouchableHighlight,
@@ -47,12 +46,13 @@ export default class Home extends React.Component{
       ],
       list: [],
       refresh: true,
+      cityDetails: ''
     };
 
     this.fetchData = this.fetchData.bind(this);
     this.handleRefresh = this.handleRefresh.bind(this);
   }
-
+  
   componentDidMount(){
     this.getTemps();
   }
@@ -146,7 +146,7 @@ export default class Home extends React.Component{
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
             <TouchableHighlight
-              onPress={() => alert(item.details)}
+              onPress={() => this.setState({ cityDetails: item.details})}
               underlayColor="white"
             >
               <LinearGradient
@@ -165,16 +165,37 @@ export default class Home extends React.Component{
           refreshing={this.state.refresh}
           onRefresh={this.handleRefresh}
         />
-        {/* <Button
-          title="Go to Page"
-          onPress={() => this.navigation.navigate('Page')}
-        /> */}
+        { 
+        this.state.cityDetails ? (
+        <View style={styles.alertBox}>
+            <LinearGradient
+              style={{flex: 1, borderRadius: 20, alignItems: "center", justifyContent: "center"}}
+                colors={["#136a8a", "#267871"]}
+              start={[0, 0.65]}
+            >
+              <Text>{this.state.cityDetails}</Text>
+              <TouchableHighlight
+                onPress={() => this.setState({cityDetails: ""})}
+                underlayColor="white"
+              >
+                <Text>Close</Text>
+              </TouchableHighlight>
+            </LinearGradient>
+        </View>
+        ) : (<Text>''</Text>) 
+        }
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  alertBox: {
+    position: "absolute",
+    width: "75%",
+    height: 90,
+
+  },
   cold: { color: "navy" },
   normal: { color: "green" },
   medium: { color: "orange" },

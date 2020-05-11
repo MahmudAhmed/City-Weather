@@ -1,17 +1,27 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from '@react-navigation/stack';
+// import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './app/screens/home';
-import Page from './app/screens/page2';
-const Stack = createStackNavigator();
+import Search from './app/screens/search';
+// const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function MyStack() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator headerMode="none">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Page" component={Page} />
-      </Stack.Navigator>
+    <NavigationContainer >
+      <Tab.Navigator 
+        tabBarOptions={{
+          activeTintColor: "tomato",
+          inactiveTintColor: "gray",
+          tabStyle:{ 
+            justifyContent: 'center', 
+          }
+        }}
+      >
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Search" component={Search} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
